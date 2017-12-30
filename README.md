@@ -7,7 +7,8 @@ The replacement_state.cpp and replacement_state.h files are modified to incorpor
 
 export DAN_POLICY=2; ./efectiu <trace-file-name>.gz
 
-5 traces from SPEC CPU 2006 have been provided in the "traces" directory. These traces are the last-level cache accesses for one billion instructions on a machine with a three-level cache hierarchy where the first level is 32KB split I+D and, level is a unified 256KB, and the third level is the 4MB cache we are optimizing. Goal is to maximize geometric mean speedup over LRU. That is, for each benchmark compute the IPC with perceptron technique, divide that by the IPC from LRU to get the speedup, then take the geometric mean of all the speedups. All these steps are taken care by the run script. Once the code is built, just execute the below command in efectiu directory to run the code with both LRU and perceptron policies to compute the overall speedup:
+5 traces from SPEC CPU 2006 have been provided at - https://drive.google.com/drive/folders/1vHr9R8wNsh16S5OVO35WHF0wIgiLTjlF?usp=sharing
+Please download these into efectiu folder. These traces are the last-level cache accesses for one billion instructions on a machine with a three-level cache hierarchy where the first level is 32KB split I+D and, level is a unified 256KB, and the third level is the 4MB cache we are optimizing. Goal is to maximize geometric mean speedup over LRU. That is, for each benchmark compute the IPC with perceptron technique, divide that by the IPC from LRU to get the speedup, then take the geometric mean of all the speedups. All these steps are taken care by the run script. Once the code is built, just execute the below command in efectiu directory to run the code with both LRU and perceptron policies to compute the overall speedup:
 
 ./run.sh
 
